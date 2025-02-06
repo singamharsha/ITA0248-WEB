@@ -1,0 +1,62 @@
+/* General reset for margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and container setup */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    text-align: center;
+}
+
+/* Fixed size emojis container */
+.emoji-container {
+    margin-bottom: 50px;
+}
+
+.emoji {
+    font-size: 50px; /* Fixed size for emojis */
+    margin: 10px;
+}
+
+/* Positioned Emojis */
+.positioned-container {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    border: 2px solid #333;
+    margin-top: 50px;
+}
+
+.positioned-emoji {
+    font-size: 60px; /* Fixed size for emojis */
+    position: absolute;
+}
+
+.top-left {
+    top: 10px;
+    left: 10px;
+}
+
+.top-right {
+    top: 10px;
+    right: 10px;
+}
+
+.bottom-left {
+    bottom: 10px;
+    left: 10px;
+}
+
+.bottom-right {
+    bottom: 10px;
+    right: 10px;
+}

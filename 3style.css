@@ -1,0 +1,21 @@
+/* Style for Parent */
+.parent {
+    width: 300px;
+    height: 200px;
+    background-color: lightblue;
+    position: relative; /* Parent element positioned relative to itself */
+    border: 2px solid #000;
+    padding: 20px;
+}
+
+/* Style for Child */
+.child {
+    width: 150px;
+    height: 100px;
+    background-color: lightgreen;
+    position: relative; /* Child element positioned relative to itself */
+    top: 20px; /* Moves the child 20px down from its normal position */
+    left: 30px; /* Moves the child 30px right from its normal position */
+    border: 2px solid #000;
+    padding: 10px;
+}

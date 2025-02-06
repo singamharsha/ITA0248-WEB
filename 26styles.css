@@ -1,0 +1,11 @@
+/* Apply background image to the body */
+body {
+    background-image: url("images/lion.gif"); /* Replace with your image URL */
+    background-size: cover;           /* Make the image cover the entire page */
+    background-repeat: no-repeat;     /* Prevent repeating */
+    background-position: center;      /* Center the image */
+    font-family: Arial, sans-serif;
+    color: white;                     /* Text color for better contrast */
+    text-align: center;
+    padding: 50px;
+}

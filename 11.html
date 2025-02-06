@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Slider with Radio Buttons</title>
+    <link rel="stylesheet" href="11styles.css"> <!-- Linking External CSS -->
+</head>
+<body>
+    <div class="slider">
+        <!-- Radio Buttons for Navigation -->
+        <input type="radio" name="slide" id="slide1" checked>
+        <input type="radio" name="slide" id="slide2">
+        <input type="radio" name="slide" id="slide3">
+
+        <!-- Image Slides -->
+        <div class="slides">
+            <div class="slide s1">
+                <img src="images/lion.gif" alt="Image 1">
+            </div>
+            <div class="slide s2">
+                <img src="images/dog.jpg.jpg" alt="Image 2">
+            </div>
+            <div class="slide s3">
+                <img src="images/rabbit.jpg.jpg" alt="Image 3">
+            </div>
+        </div>
+
+        <!-- Navigation Dots -->
+        <div class="navigation-manual">
+            <label for="slide1" class="manual-btn"></label>
+            <label for="slide2" class="manual-btn"></label>
+            <label for="slide3" class="manual-btn"></label>
+        </div>
+    </div>
+</body>
+</html>

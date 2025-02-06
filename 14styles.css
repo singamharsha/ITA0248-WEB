@@ -1,0 +1,43 @@
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    position: relative; /* Needed for absolute positioning to work correctly */
+    width: 400px;
+    height: 300px;
+    margin: 50px auto;
+    border: 2px solid #333;
+    background-color: #fff;
+}
+
+/* Common styles for both boxes */
+.box {
+    position: absolute; /* Absolute positioning */
+    width: 200px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+/* First Box (Background) */
+.box1 {
+    background-color: #4CAF50;
+    top: 30px;
+    left: 30px;
+}
+
+/* Second Box (Foreground) */
+.box2 {
+    background-color: rgba(255, 0, 0, 0.8); /* Slightly transparent to see overlap */
+    top: 70px;
+    left: 70px;
+}

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dynamic String Operations</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            padding: 20px;
+            text-align: center;
+        }
+        input, button {
+            padding: 10px;
+            margin: 8px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        button {
+            background-color: #007BFF;
+            color: white;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        #result {
+            background-color: #fff;
+            padding: 15px;
+            margin-top: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Dynamic String Operations in JavaScript</h2>
+
+    <!-- 1️⃣ Character at a Specified Location -->
+    <h4>1️⃣ Get Character at a Specific Index</h4>
+    <input type="text" id="charString" placeholder="Enter a string">
+    <input type="number" id="charIndex" placeholder="Enter index">
+    <button onclick="getCharacter()">Get Character</button>
+
+    <!-- 2️⃣ Unicode of the Character -->
+    <h4>2️⃣ Get Unicode of Character</h4>
+    <input type="text" id="unicodeString" placeholder="Enter a string">
+    <input type="number" id="unicodeIndex" placeholder="Enter index">
+    <button onclick="getUnicode()">Get Unicode</button>
+
+    <!-- 3️⃣ Join Two Strings -->
+    <h4>3️⃣ Join Two or More Strings</h4>
+    <input type="text" id="joinStr1" placeholder="Enter first string">
+    <input type="text" id="joinStr2" placeholder="Enter second string">
+    <button onclick="joinStrings()">Join Strings</button>
+
+    <!-- 4️⃣ Convert Unicode to Character -->
+    <h4>4️⃣ Convert Unicode to Character</h4>
+    <input type="number" id="unicodeValue" placeholder="Enter Unicode value">
+    <button onclick="unicodeToString()">Convert to Character</button>
+
+    <!-- 5️⃣ Convert String to Uppercase -->
+    <h4>5️⃣ Convert String to Uppercase</h4>
+    <input type="text" id="upperCaseStr" placeholder="Enter string">
+    <button onclick="toUpperCase()">Convert to Uppercase</button>
+
+    <div id="result"></div> <!-- Result Display -->
+
+    <script>
+        // 1️⃣ Get Character at a Specific Index
+        function getCharacter() {
+            const str = document.getElementById("charString").value;
+            const index = parseInt(document.getElementById("charIndex").value);
+            
+            if (index >= 0 && index < str.length) {
+                const character = str.charAt(index);
+                document.getElementById("result").innerHTML = 
+                    `Character at index ${index} in "${str}" is: <strong>${character}</strong>`;
+            } else {
+                document.getElementById("result").innerHTML = 
+                    `<strong>Error:</strong> Index out of range.`;
+            }
+        }
+
+        // 2️⃣ Get Unicode of Character
+        function getUnicode() {
+            const str = document.getElementById("unicodeString").value;
+            const index = parseInt(document.getElementById("unicodeIndex").value);
+            
+            if (index >= 0 && index < str.length) {
+                const unicode = str.charCodeAt(index);
+                document.getElementById("result").innerHTML = 
+                    `Unicode of character '${str.charAt(index)}' at index ${index} is: <strong>${unicode}</strong>`;
+            } else {
+                document.getElementById("result").innerHTML = 
+                    `<strong>Error:</strong> Index out of range.`;
+            }
+        }
+
+        // 3️⃣ Join Two Strings
+        function joinStrings() {
+            const str1 = document.getElementById("joinStr1").value;
+            const str2 = document.getElementById("joinStr2").value;
+            
+            const joinedString = str1.concat(" ", str2);
+            document.getElementById("result").innerHTML = 
+                `Joined string: <strong>${joinedString}</strong>`;
+        }
+
+        // 4️⃣ Convert Unicode to Character
+        function unicodeToString() {
+            const unicodeValue = parseInt(document.getElementById("unicodeValue").value);
+            
+            if (!isNaN(unicodeValue)) {
+                const character = String.fromCharCode(unicodeValue);
+                document.getElementById("result").innerHTML = 
+                    `Character for Unicode ${unicodeValue} is: <strong>${character}</strong>`;
+            } else {
+                document.getElementById("result").innerHTML = 
+                    `<strong>Error:</strong> Please enter a valid Unicode value.`;
+            }
+        }
+
+        // 5️⃣ Convert String to Uppercase
+        function toUpperCase() {
+            const str = document.getElementById("upperCaseStr").value;
+            
+            if (str.trim() !== "") {
+                const upperCaseStr = str.toUpperCase();
+                document.getElementById("result").innerHTML = 
+                    `Original: "${str}" <br> Uppercase: <strong>${upperCaseStr}</strong>`;
+            } else {
+                document.getElementById("result").innerHTML = 
+                    `<strong>Error:</strong> Please enter a string.`;
+            }
+        }
+    </script>
+
+</body>
+</html>

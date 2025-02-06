@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Number Operations</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f0f8ff;
+        }
+        h1 {
+            color: #333;
+        }
+        .container {
+            margin-bottom: 20px;
+        }
+        input, button {
+            padding: 8px;
+            margin: 5px;
+        }
+        .result {
+            font-weight: bold;
+            color: green;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>JavaScript Number Operations</h1>
+
+    <!-- Exponential Value -->
+    <div class="container">
+        <h3>1. Exponential Value (e^x)</h3>
+        <input type="number" id="expInput" placeholder="Enter a number">
+        <button onclick="calculateExponential()">Calculate</button>
+        <p class="result" id="expResult"></p>
+    </div>
+
+    <!-- Limit Decimal Digits -->
+    <div class="container">
+        <h3>2. Limit Decimal Digits</h3>
+        <input type="number" id="decimalInput" placeholder="Enter a number">
+        <input type="number" id="decimalPlaces" placeholder="Decimal places (e.g., 2)">
+        <button onclick="limitDecimal()">Limit Digits</button>
+        <p class="result" id="decimalResult"></p>
+    </div>
+
+    <!-- Convert Number to String -->
+    <div class="container">
+        <h3>3. Convert Number to String</h3>
+        <input type="number" id="numToStringInput" placeholder="Enter a number">
+        <button onclick="convertToString()">Convert</button>
+        <p class="result" id="stringResult"></p>
+    </div>
+
+    <!-- Return Negative Infinity -->
+    <div class="container">
+        <h3>4. Return Negative Infinity</h3>
+        <button onclick="getNegativeInfinity()">Show Negative Infinity</button>
+        <p class="result" id="infinityResult"></p>
+    </div>
+
+    <script>
+        // 1. Exponential Value Calculation
+        function calculateExponential() {
+            const number = document.getElementById('expInput').value;
+            const result = Math.exp(number);
+            document.getElementById('expResult').innerText = `Exponential Value: ${result}`;
+        }
+
+        // 2. Limit the Number of Decimal Digits
+        function limitDecimal() {
+            const number = parseFloat(document.getElementById('decimalInput').value);
+            const decimals = parseInt(document.getElementById('decimalPlaces').value);
+            const result = number.toFixed(decimals);  // Limits decimal places
+            document.getElementById('decimalResult').innerText = `Limited to ${decimals} decimals: ${result}`;
+        }
+
+        // 3. Convert Number to String
+        function convertToString() {
+            const number = document.getElementById('numToStringInput').value;
+            const result = number.toString();  // Converts number to string
+            document.getElementById('stringResult').innerText = `Converted to String: "${result}"`;
+        }
+
+        // 4. Return Negative Infinity
+        function getNegativeInfinity() {
+            const result = Number.NEGATIVE_INFINITY;  // Returns negative infinity
+            document.getElementById('infinityResult').innerText = `Negative Infinity: ${result}`;
+        }
+    </script>
+
+</body>
+</html>

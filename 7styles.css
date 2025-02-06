@@ -1,0 +1,35 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+/* First Floating Box */
+.box1 {
+    width: 200px;
+    height: 200px;
+    background-color: lightblue;
+    float: left;   /* Floats to the left */
+    margin: 10px;
+    text-align: center;
+    line-height: 200px; /* Vertically center the text */
+    border: 2px solid navy;
+}
+
+/* Second Floating Box */
+.box2 {
+    width: 150px;
+    height: 150px;
+    background-color: lightcoral;
+    float: left;   /* Floats to the left as well, overlapping the first box */
+    margin: -50px 0 0 100px;  /* Adjusted margin to create overlap */
+    text-align: center;
+    line-height: 150px;
+    border: 2px solid darkred;
+}
+
+/* Clearfix to prevent overlapping below content */
+p {
+    clear: both;  /* Clears float, so text starts after the floating boxes */
+    margin-top: 20px;
+}

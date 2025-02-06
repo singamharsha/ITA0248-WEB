@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Box Model Example</title>
+    <style>
+        .box {
+            width: 300px; /* Width of the content area */
+            padding: 20px; /* Space between content and border */
+            border: 5px solid #4CAF50; /* Border around the box */
+            margin: 30px; /* Space between this box and other elements */
+            background-color: #f9f9f9; /* Background color of the box */
+            text-align: center;
+        }
+
+        .content {
+            background-color: #e2e2e2;
+            padding: 20px;
+            margin: 10px;
+        }
+
+        .inner-box {
+            background-color: #b3e0ff;
+            padding: 10px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2 style="text-align: center;">CSS Box Model Demonstration</h2>
+
+    <div class="box">
+        <h3>Outer Box</h3>
+        <p>This is the content area inside the box.</p>
+
+        <!-- Nested box within the outer box -->
+        <div class="content">
+            <h4>Nested Box</h4>
+            <p>Content within the nested box.</p>
+
+            <!-- Another inner nested box -->
+            <div class="inner-box">
+                <h5>Inner Nested Box</h5>
+                <p>Even more content in the inner box.</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

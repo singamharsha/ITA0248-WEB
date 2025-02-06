@@ -1,0 +1,27 @@
+/* General Body Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* Container with Background Image */
+.container {
+    background-image: url('images/lion.gif'); /* Replace with your image filename */
+    background-repeat: repeat;              /* Default - repeats both horizontally and vertically */
+    background-size: 150px 150px;           /* Controls the size of the repeated image */
+    padding: 50px;
+    text-align: center;
+    border: 3px solid #333;
+    margin: 20px;
+}
+
+/* Text Styling */
+h1 {
+    color: #333;
+}
+
+p {
+    color: #555;
+}
